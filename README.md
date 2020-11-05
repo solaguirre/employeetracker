@@ -24,7 +24,9 @@ Employee Tracker is a command-line application that helps a company manage emplo
 
    
   ## Installation 
-
+ 
+ In order to run the CLI you will need `run` the following in your integrated terminal:
+ * `npm install inquirer`
  
   ## Usage 
 
