@@ -5,63 +5,72 @@ const inquirer = require('inquirer');
 
 const db = require('./database/db')
 
-inquirer.prompt([
-    // pass questions here
-    {
-        name: 'message',
-        type: "list",
-        message: "What would you like to do?",
-        choices: ['View Employees', 'View Employee Role', 'View Departments', 'Add Employee', 'Add Employee Role', 'Add Department', 'Update Employee Role']
+function main() {
 
-    }
-])
-    .then(answers => {
-        console.log(answers);
-        switch (answers.message) {
-            case 'View Employees':
-                viewEmployees();
-                break;
 
-            case 'View Employee Role':
-                viewRole();
-                break;
-
-            case 'View Departments':
-                viewDepartments();
-                break;
-
-            case 'Add Employee':
-                addEmployee();
-                break;
-
-            case 'Add Employee Role':
-                addRole();
-                break;
-
-            case 'Add Department':
-                addDepartment();
-                break;
-
-            case 'Update Employee Role':
-                updateEmployeeRole();
-                break;
+    inquirer.prompt([
+        // pass questions here
+        {
+            name: 'message',
+            type: "list",
+            message: "What would you like to do?",
+            choices: ['View Employees', 'View Employee Role', 'View Departments', 'Add Employee', 'Add Employee Role', 'Add Department', 'Update Employee Role']
 
         }
+    ])
+        .then(answers => {
+            console.log(answers);
+            switch (answers.message) {
+                case 'View Employees':
+                    viewEmployees();
+                    break;
 
-    })
-    .catch(error => {
-        console.log(error);
+                case 'View Employee Role':
+                    viewRole();
+                    break;
+
+                case 'View Departments':
+                    viewDepartments();
+                    break;
+
+                case 'Add Employee':
+                    addEmployee();
+                    break;
+
+                case 'Add Employee Role':
+                    addRole();
+                    break;
+
+                case 'Add Department':
+                    addDepartment();
+                    break;
+
+                case 'Update Employee Role':
+                    updateEmployeeRole();
+                    break;
+
+            }
+
+        })
+        .catch(error => {
+            console.log(error);
 
 
-    })
+        })
+};
 
 function viewEmployees() {
-    console.log('Hola');
-
-    // SELECT
-
+    main();
 
 };
+
+function viewDepartments(){
+    main();
+}
+
+function viewRole() {
+    main();
+}
 
 function addDepartment() {
 
@@ -75,6 +84,7 @@ function addEmployee() {
 
 };
 
+function updateEmployeeRole();
 
 // Build a command-line application that at a minimum allows the user to:
 

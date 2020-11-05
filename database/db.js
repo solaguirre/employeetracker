@@ -4,7 +4,6 @@ let connection = require('./connection');
 // send queries to database and send data back 
 
 class Database {
-    // methods repeated
 
     // Add departments, roles, employees
 
@@ -57,6 +56,14 @@ class Database {
 // view department
     query() {
         connection.query("SELECT * FROM department", function (err, res) {
+            if (err) throw err;
+            console.log(res);
+
+        });
+    }
+    //  update employee role
+    query() {
+        connection.query("SELECT * FROM employee", function (err, res) {
             if (err) throw err;
             console.log(res);
 
