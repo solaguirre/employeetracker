@@ -4,7 +4,8 @@
   "description": "![license](https://img.shields.io/badge/License-MIT-green.svg)",
   "main": "server.js",
   "dependencies": {
-    "inquirer": "^7.3.3"
+    "inquirer": "^7.3.3",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {},
   "scripts": {

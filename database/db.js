@@ -12,16 +12,51 @@ class Database {
 
     // Update employee roles
 
+    // view employees
     query() {
-        connection.query("SELECT * FROM employees", function (err, res) {
+        connection.query("SELECT * employee", function (err, res) {
+            if (err) throw err;
+            console.log(res);
+
+        });
+    }
+    // add employee
+    query() {
+        connection.query("INSERT INTO employee SET ?", function (err, res) {
+            if (err) throw err;
+            console.log(res);
+
+        });
+    }
+    // add employee role
+    query() {
+        connection.query("INSERT INTO role SET ?", function (err, res) {
             if (err) throw err;
             console.log(res);
 
         });
     }
 
+    // view employee role 
     query() {
-        connection.query("SELECT * FROM employees", function (err, res) {
+        connection.query("SELECT * FROM role", function (err, res) {
+            if (err) throw err;
+            console.log(res);
+
+        });
+    }
+
+    // add department
+    query() {
+        connection.query("INSERT INTO department SET ?", function (err, res) {
+            if (err) throw err;
+            console.log(res);
+
+        });
+    }
+// view department
+    query() {
+        connection.query("SELECT * FROM department", function (err, res) {
             if (err) throw err;
             console.log(res);
 

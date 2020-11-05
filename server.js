@@ -1,6 +1,6 @@
 // // inquirer 
 console.log('Hello');
-const mysql = require('mysql');
+
 const inquirer = require('inquirer');
 
 const db = require('./database/db')
@@ -58,7 +58,7 @@ inquirer.prompt([
 function viewEmployees() {
     console.log('Hola');
 
-    SELECT
+    // SELECT
 
 
 };
