@@ -64,7 +64,7 @@ function viewEmployees() {
 
 };
 
-function viewDepartments(){
+function viewDepartments() {
     main();
 }
 
@@ -73,18 +73,79 @@ function viewRole() {
 }
 
 function addDepartment() {
-
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: "dept_name",
+            message: "Type in the new department"
+        }
+    ])
+    main();
 };
 
 function addRole() {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: "title",
+            message: "What is the employee's title?"
+        },
+        {
+            type: 'input',
+            name: "salary",
+            message: "What is the employee's salary?"
+        },
+        {
+            type: 'input',
+            name: "department_id",
+            message: "What is the employee's department ID?"
+        }
 
+    ])
+    main();
 };
 
 function addEmployee() {
-
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: "first_name",
+            message: "What is the employee's first name?"
+        },
+        {
+            type: 'input',
+            name: "last_name",
+            message: "What is the employee's last name?"
+        },
+        {
+            type: 'input',
+            name: "role_id",
+            message: "What is the employee's role ID?"
+        },
+        {
+            type: 'input',
+            name: 'manager_id',
+            message: "What is the employee's manager ID?"
+        },
+    ])
+    main();
 };
 
-function updateEmployeeRole();
+function updateEmployeeRole() {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: "employee_id",
+            message: "What is the employee's ID #?"
+        },
+        {
+            type: 'input',
+            name: "role_id",
+            message: "What is the employee's new role ID #?"
+        }
+    ])
+    main();
+};
 
 // Build a command-line application that at a minimum allows the user to:
 
