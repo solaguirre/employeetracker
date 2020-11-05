@@ -1,7 +1,7 @@
 // // inquirer 
-console.log("Hello");
-
-var inquirer = require('inquirer');
+console.log('Hello');
+const mysql = require('mysql');
+const inquirer = require('inquirer');
 
 const db = require('./database/db')
 
@@ -11,61 +11,71 @@ inquirer.prompt([
         name: 'message',
         type: "list",
         message: "What would you like to do?",
-        choices: ['View All Employess', 'Remove Employee', 'Update Employee Manager', 'Add Employee', 'View All Employees by Department', 'View All Employees by Manager']
+        choices: ['View Employees', 'View Employee Role', 'View Departments', 'Add Employee', 'Add Employee Role', 'Add Department', 'Update Employee Role']
 
     }
 ])
     .then(answers => {
         console.log(answers);
         switch (answers.message) {
-            case 'View All Employess':
+            case 'View Employees':
                 viewEmployees();
                 break;
 
-            case 'Add Departments':
-                addDepartment();
+            case 'View Employee Role':
+                viewRole();
                 break;
 
-            case 'Add Role':
-                addRole();
+            case 'View Departments':
+                viewDepartments();
                 break;
 
             case 'Add Employee':
                 addEmployee();
                 break;
 
+            case 'Add Employee Role':
+                addRole();
+                break;
+
+            case 'Add Department':
+                addDepartment();
+                break;
+
+            case 'Update Employee Role':
+                updateEmployeeRole();
+                break;
+
         }
-
-
-
 
     })
     .catch(error => {
+        console.log(error);
 
 
     })
 
-   function viewEmployees(){
-       console.log('Hola');
+function viewEmployees() {
+    console.log('Hola');
 
-    SELECT 
+    SELECT
 
 
-    };
+};
 
-    function addDepartment(){
+function addDepartment() {
 
-    };
+};
 
-    function addRole(){
+function addRole() {
 
-    };
+};
 
-    function addEmployee(){
+function addEmployee() {
 
-    };
+};
 
-    
+
 // Build a command-line application that at a minimum allows the user to:
 
 // Add departments, roles, employees
